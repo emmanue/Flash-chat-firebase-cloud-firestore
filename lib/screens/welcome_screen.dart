@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   void initState() {
     super.initState();
-
+  // Added some animations 
     controller = AnimationController(
       duration: Duration(seconds: 1),
       vsync: this,
