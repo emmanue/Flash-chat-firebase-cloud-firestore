@@ -40,7 +40,9 @@ class _ChatScreenState extends State<ChatScreen> {
   //     print(message.data);
   //   }
   // }
-
+  /**
+   * Streams notify as soon as there is data
+   */
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
       for (var message in snapshot.documents) {
