@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
   /**
    * Streams notify as soon as there is data
    */
-   // Using stream instead of pulling from firestore
+  // Using stream instead of pulling from firestore
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
       for (var message in snapshot.documents) {
@@ -90,13 +90,19 @@ class _ChatScreenState extends State<ChatScreen> {
                   final messageText = message.data['text'];
                   final messageSender = message.data['sender'];
 
-                  final messageWidget =
-                      Text('$messageText from $messageSender');
+                  final messageWidget = Text(
+                    '$messageText from $messageSender',
+                    style: TextStyle(fontSize: 50.0),
+                  );
 
                   messageWidgets.add(messageWidget);
                 }
-                return Column(
-                  children: messageWidgets,
+                return Expanded(
+                  child: ListView(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                    children: messageWidgets,
+                  ),
                 );
               },
             ),
