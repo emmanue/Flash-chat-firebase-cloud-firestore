@@ -90,12 +90,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   final messageText = message.data['text'];
                   final messageSender = message.data['sender'];
 
-                  final messageWidget = Text(
-                    '$messageText from $messageSender',
-                    style: TextStyle(fontSize: 50.0),
-                  );
-
-                  messageWidgets.add(messageWidget);
+                  final messageWidget = messageWidgets.add(messageWidget);
                 }
                 return Expanded(
                   child: ListView(
@@ -135,6 +130,17 @@ class _ChatScreenState extends State<ChatScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+// Styling the message font
+class MessageBubble extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '$messageText from $messageSender',
+      style: TextStyle(fontSize: 50.0),
     );
   }
 }
