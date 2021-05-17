@@ -134,7 +134,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
-// Styling the message font
+// Styling the message fonts
 class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
