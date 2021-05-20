@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'chat_screen.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
+//Separation of concern
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
 
