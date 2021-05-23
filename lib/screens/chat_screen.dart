@@ -113,6 +113,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
+// Separation of concern
 class MessagesStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
