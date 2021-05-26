@@ -136,11 +136,6 @@ class MessagesStream extends StatelessWidget {
 
           final currentUser = loggedInUser.email;
 
-          if (currentUser == messageSender) {
-            // The message from the logged in user
-
-          }
-
           final messageBubble = MessageBubble(
             sender: messageSender,
             text: messageText,
@@ -187,13 +182,15 @@ class MessageBubble extends StatelessWidget {
                 bottomLeft: Radius.circular(30.0),
                 bottomRight: Radius.circular(30.0)),
             elevation: 5.0,
-            color: Colors.lightBlueAccent,
+            color: isMe ? Colors.lightBlueAccent : Colors.white,
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Text(
                 text,
-                style: TextStyle(color: Colors.white, fontSize: 15.0),
+                style: TextStyle(
+                    color: isMe ? Colors.white : Colors.black54,
+                    fontSize: 15.0),
               ),
             ),
           ),
