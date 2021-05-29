@@ -138,7 +138,7 @@ class MessagesStream extends StatelessWidget {
   }
 }
 
-// Styling the message fonts
+// Styling the fonts of the messages
 class MessageBubble extends StatelessWidget {
   MessageBubble({this.sender, this.text, this.isMe});
 
