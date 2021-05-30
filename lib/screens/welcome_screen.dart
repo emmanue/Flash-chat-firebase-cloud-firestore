@@ -44,6 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.dispose();
   }
 
+//separation of concern
   @override
   Widget build(BuildContext context) {
     return Scaffold(
