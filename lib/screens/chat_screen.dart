@@ -27,6 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
     getCurrentUser();
   }
 
+/:asynchronous programming
   void getCurrentUser() async {
     try {
       final user = await _auth.currentUser();
