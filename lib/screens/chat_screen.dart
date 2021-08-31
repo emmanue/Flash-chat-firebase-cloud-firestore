@@ -7,6 +7,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 final _firestore = Firestore.instance;
 FirebaseUser loggedInUser;
 
+
+// Well designed architecture
 class ChatScreen extends StatefulWidget {
   static String id = 'chat_screen';
 
